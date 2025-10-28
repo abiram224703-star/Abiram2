@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling the UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Styling the UI</h1>
+            <p class="header-subtitle">Style the UI with any CSS Framework</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">UI Demo</div>
+            <ul class="nav-menu">
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#cards">Cards</a></li>
+                <li><a href="#alerts">Alerts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Buttons Section -->
+            <section id="buttons" class="section">
+                <h2 class="section-title">Buttons</h2>
+                <div class="component-showcase">
+                    <button class="btn btn--primary">Primary Button</button>
+                    <button class="btn btn--secondary">Secondary Button</button>
+                    <button class="btn btn-success">Success Button</button>
+                    <button class="btn btn-danger">Danger Button</button>
+                    <button class="btn btn--outline">Outline Button</button>
+                    <button class="btn btn--primary" disabled>Disabled Button</button>
+                    <button class="btn btn--primary btn--sm">Small Button</button>
+                    <button class="btn btn--primary btn--lg">Large Button</button>
+                </div>
+                <div class="component-showcase" style="margin-top: var(--space-16);">
+                    <button class="btn btn--primary" id="openModalBtn">Open Modal</button>
+                </div>
+            </section>
+
+            <!-- Forms Section -->
+            <section id="forms" class="section">
+                <h2 class="section-title">Form Elements</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="textInput">Text Input</label>
+                        <input type="text" id="textInput" class="form-control" placeholder="Enter text...">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="emailInput">Email Input</label>
+                        <input type="email" id="emailInput" class="form-control" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="passwordInput">Password Input</label>
+                        <input type="password" id="passwordInput" class="form-control" placeholder="••••••••">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="selectInput">Select Dropdown</label>
+                        <select id="selectInput" class="form-control">
+                            <option>Select an option...</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Checkboxes</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input">
+                                <span>Option 1</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input" checked>
+                                <span>Option 2 (checked)</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-input">
+                                <span>Option 3</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Radio Buttons</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="radio" class="radio-input" checked>
+                                <span>Choice 1</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="radio" class="radio-input">
+                                <span>Choice 2</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="radio" class="radio-input">
+                                <span>Choice 3</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Toggle Switch</label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" class="toggle-input" id="toggle1">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <p class="toggle-status" id="toggleStatus1">Off</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Toggle Switch (On)</label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" class="toggle-input" id="toggle2" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <p class="toggle-status" id="toggleStatus2">On</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cards Section -->
+            <section id="cards" class="section">
+                <h2 class="section-title">Cards</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Basic Card</h3>
+                            <p>This is a simple card component with basic styling and content.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="card-image-placeholder">🖼️</div>
+                        </div>
+                        <div class="card__body">
+                            <h3>Card with Image</h3>
+                            <p>A card component featuring an image placeholder at the top.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Card with Actions</h3>
+                            <p>This card includes action buttons at the bottom for user interaction.</p>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn btn--primary btn--sm">Action</button>
+                            <button class="btn btn--secondary btn--sm">Cancel</button>
+                        </div>
+                    </div>
+                    <div class="card card-highlight">
+                        <div class="card__body">
+                            <h3>Highlighted Card</h3>
+                            <p>A special card with enhanced styling to draw attention.</p>
+                            <span class="badge badge-primary">Featured</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Alerts Section -->
+            <section id="alerts" class="section">
+                <h2 class="section-title">Alerts &amp; Notifications</h2>
+                <div class="alerts-container">
+                    <div class="alert alert-success">
+                        <span class="alert-icon">✓</span>
+                        <div class="alert-content">
+                            <strong>Success!</strong> Your operation was completed successfully.
+                        </div>
+                    </div>
+                    <div class="alert alert-warning">
+                        <span class="alert-icon">⚠</span>
+                        <div class="alert-content">
+                            <strong>Warning!</strong> Please review your information carefully.
+                        </div>
+                    </div>
+                    <div class="alert alert-error">
+                        <span class="alert-icon">✕</span>
+                        <div class="alert-content">
+                            <strong>Error!</strong> Something went wrong. Please try again.
+                        </div>
+                    </div>
+                    <div class="alert alert-info">
+                        <span class="alert-icon">ℹ</span>
+                        <div class="alert-content">
+                            <strong>Info:</strong> Here's some helpful information for you.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress & Loaders Section -->
+            <section id="progress" class="section">
+                <h2 class="section-title">Progress &amp; Loaders</h2>
+                <div class="progress-showcase">
+                    <div class="progress-group">
+                        <label class="form-label">Progress Bar - 25%</label>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 25%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-group">
+                        <label class="form-label">Progress Bar - 50%</label>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-group">
+                        <label class="form-label">Progress Bar - 75%</label>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-fill-success" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-group">
+                        <label class="form-label">Loading Spinner</label>
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Typography Section -->
+            <section id="typography" class="section">
+                <h2 class="section-title">Typography</h2>
+                <div class="typography-showcase">
+                    <h1>Heading 1</h1>
+                    <h2>Heading 2</h2>
+                    <h3>Heading 3</h3>
+                    <h4>Heading 4</h4>
+                    <h5>Heading 5</h5>
+                    <h6>Heading 6</h6>
+                    <p>This is a regular paragraph with <strong>bold text</strong>, <em>italic text</em>, and <a href="#">a link</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <blockquote class="blockquote">
+                        "This is a blockquote element. It's used to highlight important quotes or testimonials."
+                    </blockquote>
+                    <ul>
+                        <li>Unordered list item 1</li>
+                        <li>Unordered list item 2</li>
+                        <li>Unordered list item 3</li>
+                    </ul>
+                    <ol>
+                        <li>Ordered list item 1</li>
+                        <li>Ordered list item 2</li>
+                        <li>Ordered list item 3</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Tables Section -->
+            <section id="tables" class="section">
+                <h2 class="section-title">Tables</h2>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td>Developer</td>
+                                <td><span class="status status--success">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                                <td>Designer</td>
+                                <td><span class="status status--success">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>Bob Johnson</td>
+                                <td>bob@example.com</td>
+                                <td>Manager</td>
+                                <td><span class="status status--warning">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Alice Brown</td>
+                                <td>alice@example.com</td>
+                                <td>QA Engineer</td>
+                                <td><span class="status status--error">Inactive</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Badges Section -->
+            <section id="badges" class="section">
+                <h2 class="section-title">Badges &amp; Labels</h2>
+                <div class="component-showcase">
+                    <span class="badge badge-primary">Primary</span>
+                    <span class="badge badge-success">Success</span>
+                    <span class="badge badge-warning">Warning</span>
+                    <span class="badge badge-danger">Danger</span>
+                    <span class="badge badge-info">Info</span>
+                    <span class="badge badge-outline">Outline</span>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Modal Dialog</h3>
+                <button class="modal-close" id="closeModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>This is a modal dialog component. It overlays the main content and can be used for important messages, forms, or confirmations.</p>
+                <div class="form-group">
+                    <label class="form-label" for="modalInput">Sample Input</label>
+                    <input type="text" id="modalInput" class="form-control" placeholder="Enter something...">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--secondary" id="cancelModalBtn">Cancel</button>
+                <button class="btn btn--primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 UI Styling Demo. Built with modern CSS.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
